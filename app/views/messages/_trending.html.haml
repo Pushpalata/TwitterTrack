@@ -1,0 +1,9 @@
+%ul
+  - if @trends.present?
+    - @trends.each do |trend|
+      %li
+        = link_to trend.name, trend.url.to_s, :target => "_blank"
+  - else
+    %p 
+      No Result
+  

@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %title Twittertrack
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .firstload-background
+    = render :partial => "layouts/header"
+    .clear
+    #content-wrapper.container
+      #primary.row
+        = yield
+    .clear
+    #colophon.site-footer{:role => "contentinfo"}
+      #footer.footer
+        .container1.clearfix
+          .go-top
+            %a{:href => "#"}
+              %i.fa.fa-angle-up
+          %p
+            © Copyright 2014
+            %a{:href => "http://addiction-soratemplates.blogspot.in/"}
+              Addiction
+            |
+          #mycontent
+            Created By
+            %a{:href => "http://www.soratemplates.com/", :rel => "dofollow", :target => "_blank", :title => "Blogger Templates"} Sora Templates
+            and
+            %a{:href => "http://mybloggerthemes.com/", :rel => "dofollow", :target => "_blank", :title => "Free Blogger Templates"} My Blogger Themes
+          %p
+    #loadScreen
+      #loadScr
+      #loader
+        = image_tag("ajax-loader.gif", :alt => "Loading...")

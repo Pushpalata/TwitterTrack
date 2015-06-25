@@ -1,0 +1,90 @@
+!!!
+%html
+  %head
+    %title Twittertrack
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .firstload-background
+    = render :partial => "layouts/header"
+    .clear
+    #content-wrapper.container
+      #primary.row
+        #content.span9
+          #main.main.section
+            #Blog1.widget.Blog
+              = yield
+        #side-bar.span3
+          #sidebar.sidebar.section
+            #PopularPosts1.widget.PopularPosts
+              %h2
+                %span Popular Posts
+              .widget-content.popular-posts
+                %ul
+                  %dd
+                    %img{:alt => "Welcome to Addiction !", :height => "50", :src => "http://1.bp.blogspot.com/-QARbmVl4PD4/U_d93j3FdzI/AAAAAAAABYs/FOka5aEA-dU/s72-c/landscape1-750x450.jpg", :width => "50"}
+                      %a{:href => "http://addiction-soratemplates.blogspot.in/2014/07/welcome-to-addiction.html", :rel => "bookmark", :title => "Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Mo..."} Welcome to Addiction !
+                      %div{:style => "clear: both;"}
+                  %dd
+                    %img{:alt => "Sed luctus semper odio aliquam rhoncus", :height => "50", :src => "http://1.bp.blogspot.com/-uc6nMSQ-XbY/U_d9n1K_i9I/AAAAAAAABYo/MXG79qiES04/s72-c/customersupport.jpg", :width => "50"}
+                      %a{:href => "http://addiction-soratemplates.blogspot.in/2014/04/sed-luctus-semper-odio-aliquam-rhoncus_19.html", :rel => "bookmark", :title => "&nbsp;Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec  laoreet orci, eget ullamcorper quam. Phasellus lorem neque, sceleris..."} Sed luctus semper odio aliquam rhoncus
+                      %div{:style => "clear: both;"}
+                  %dd
+                    %img{:alt => "Proin rhoncus consequat nisl eu ornare ", :height => "50", :src => "http://1.bp.blogspot.com/-TCiT6lisK44/U_iAcqkUm_I/AAAAAAAABaY/pHNP4u6oJII/s72-c/earth.jpg", :width => "50"}
+                      %a{:href => "http://addiction-soratemplates.blogspot.in/2013/12/proin-rhoncus-consequat-nisl-eu-ornare_14.html", :rel => "bookmark", :title => "Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus,  egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna.  ..."} Proin rhoncus consequat nisl eu ornare
+                      %div{:style => "clear: both;"}
+                  %dd
+                    %img{:alt => "Pellentesque habitant morbi tristique senectus ", :height => "50", :src => "http://2.bp.blogspot.com/-H5M2Clf7vFc/U_iArOLt1eI/AAAAAAAABao/TK_-xYtf9xE/s72-c/photodune-5052286-summer-m.jpg", :width => "50"}
+                      %a{:href => "http://addiction-soratemplates.blogspot.in/2013/12/pellentesque-habitant-morbi-tristique_14.html", :rel => "bookmark", :title => "Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus,  egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna.  ..."} Pellentesque habitant morbi tristique senectus
+                      %div{:style => "clear: both;"}
+            #Label1.widget.Label
+              %h2
+                %span Labels
+              .widget-content.list-label-widget-content
+                %ul
+                  %li
+                    %a{:dir => "ltr", :href => "http://addiction-soratemplates.blogspot.in/search/label/Business"} Business
+                  %li
+                    %a{:dir => "ltr", :href => "http://addiction-soratemplates.blogspot.in/search/label/Gallery"} Gallery
+                  %li
+                    %a{:dir => "ltr", :href => "http://addiction-soratemplates.blogspot.in/search/label/Games"} Games
+                  %li
+                    %a{:dir => "ltr", :href => "http://addiction-soratemplates.blogspot.in/search/label/Life%20%26%20style"} Life &amp; style
+                  %li
+                    %a{:dir => "ltr", :href => "http://addiction-soratemplates.blogspot.in/search/label/Slider"} Slider
+                  %li
+                    %a{:dir => "ltr", :href => "http://addiction-soratemplates.blogspot.in/search/label/Sports"} Sports
+                  %li
+                    %a{:dir => "ltr", :href => "http://addiction-soratemplates.blogspot.in/search/label/Technology"} Technology
+                  %li
+                    %a{:dir => "ltr", :href => "http://addiction-soratemplates.blogspot.in/search/label/ver"} ver
+                .clear
+                %span.widget-item-control
+                  %span.item-control.blog-admin
+                    %a.quickedit{:href => "//www.blogger.com/rearrange?blogID=3012279342595805206&amp;widgetType=Label&amp;widgetId=Label1&amp;action=editWidget&amp;sectionId=sidebar", :onclick => "return _WidgetManager._PopupConfig(document.getElementById(&quot;Label1&quot;));", :target => "configLabel1", :title => "Edit"}
+                      %img{:alt => "", :height => "18", :src => "//img1.blogblog.com/img/icon18_wrench_allbkg.png", :width => "18"}
+                .clear
+        .clear
+    .clear
+    #colophon.site-footer{:role => "contentinfo"}
+      #footer.footer
+        .container1.clearfix
+          .go-top
+            %a{:href => "#"}
+              %i.fa.fa-angle-up
+          %p
+            © Copyright 2014
+            %a{:href => "http://addiction-soratemplates.blogspot.in/"}
+              Addiction
+            |
+          #mycontent
+            Created By
+            %a{:href => "http://www.soratemplates.com/", :rel => "dofollow", :target => "_blank", :title => "Blogger Templates"} Sora Templates
+            and
+            %a{:href => "http://mybloggerthemes.com/", :rel => "dofollow", :target => "_blank", :title => "Free Blogger Templates"} My Blogger Themes
+          %p
+    #loadScreen
+      #loadScr
+      #loader
+        = image_tag("ajax-loader.gif", :alt => "Loading...")

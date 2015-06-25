@@ -1,0 +1,7 @@
+%section.author.clearfix
+  %span.author-img{:href => "#"}
+    %a{:href => "http://sproutsocial.com/insights/author/michael-patterson/"}
+      %img.avatar.avatar-110.photo{:alt => "", :height => "110", :src => "http://1.gravatar.com/avatar/d824b3aa2af94cc26ede7083eecef3d8?s=110&amp;d=mm&amp;r=g", :srcset => "http://1.gravatar.com/avatar/d824b3aa2af94cc26ede7083eecef3d8?s=220&amp;d=mm&amp;r=g 2x", :width => "110"}/
+  %section.author-bio
+    %a{:href => "http://sproutsocial.com/insights/author/michael-patterson/", :rel => "author", :title => "Posts by Michael Patterson"} Michael Patterson
+    %p Michael began his career at Sprout Social as an intern, but has since transitioned to the role of Digital Marketing Specialist. When he isn't researching new ways to drive online traffic, he can usually be found exploring Chicago's unique neighborhoods and breweries.

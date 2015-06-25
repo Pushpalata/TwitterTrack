@@ -1,0 +1,4 @@
+- if params[:woeid].present?
+  = render :partial => "messages/trending"
+- else
+  $("#tweet_list").html("#{escape_javascript(render :partial => "messages/list")}")

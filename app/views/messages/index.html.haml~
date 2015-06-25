@@ -1,0 +1,60 @@
+#content.span9
+  #main.main.section
+    #Blog1.widget.Blog
+      .post
+        .entry-container
+          .entry-content
+            %h1
+              Search on Twitter
+        = form_tag messages_path, :method => :get, :remote => true do |f|
+          #searchform.searchform
+            = text_field_tag :term, params[:term], :placeholder => "Search..."
+            %br
+            = submit_tag "Search", :class => "btn"
+        .clear
+      .comments#comments
+        %h4
+          Today's Tweets
+        .comments-content
+          .comment-holder#tweet_list
+            = render :partial => "messages/list"
+        .clear
+#side-bar.span3
+  #sidebar.sidebar.section
+    #PopularPosts1.widget.PopularPosts
+      %h2
+        %span Most 
+      .widget-content.popular-posts
+        %ul
+          %dd
+            %img{:alt => "Welcome to Addiction !", :height => "50", :src => "http://1.bp.blogspot.com/-QARbmVl4PD4/U_d93j3FdzI/AAAAAAAABYs/FOka5aEA-dU/s72-c/landscape1-750x450.jpg", :width => "50"}
+              %a{:href => "http://addiction-soratemplates.blogspot.in/2014/07/welcome-to-addiction.html", :rel => "bookmark", :title => "Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Mo..."} Welcome to Addiction !
+              %div{:style => "clear: both;"}
+    #Label2.widget.Label
+      %h2
+        %span Most Trending In India
+      .widget-content.list-label-widget-content#most_trending_india
+        = image_tag("loading.gif")
+        .clear
+    #Label1.widget.Label
+      %h2
+        %span Most Trending Worldwide
+      .widget-content.list-label-widget-content#most_trending_worldwide
+        = image_tag("loading.gif")
+        .clear
+    
+.clear
+
+:javascript 
+  $('#most_trending_worldwide').load("#{trending_url(:format => 'js', :woeid => 1)}");
+  $('#most_trending_india').load("#{trending_url(:format => 'js', :woeid => 23424848)}");
+
+
+
+
+
+
+
+
+
+                  

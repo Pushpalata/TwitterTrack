@@ -1,0 +1,137 @@
+@media print {
+  * {
+    text-shadow: none !important;
+    color: #000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  a,a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after {
+    content: "";
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+@  page {
+    margin: 0.5cm;
+  }
+
+  p,h2,h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,h3 {
+    page-break-after: avoid;
+  }
+}
+
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-moz-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-ms-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-o-keyframes progress-bar-stripes {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 40px 0;
+  }
+}
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+
+  to {
+    background-position: 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  div#content {
+    margin-top: 100px;
+  }
+
+  #primary {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .navbar .brand {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .bl_background {
+    display: none;
+  }
+
+  .share-story-container ul {
+    margin: 14px 0;
+  }
+
+  #masthead {
+    position: absolute!important;
+    width: 100%;
+  }
+
+  #header img {
+    margin-top: 15px;
+    max-height: 53px;
+  }
+}
+
+.post-avatar {
+  background: url(http://1.gravatar.com/avatar/99959a1d886d913ef29cd5d607c58952?s=100&d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D100&r=G);
+}
+

@@ -1,0 +1,23 @@
+- if @tweets.blank?
+  %p
+    No search 
+- else
+  %ol
+    - @tweets.each do |tweet|
+      %li.comment
+        .avatar-image-container
+          = image_tag("https://twitter.com/#{tweet.user.screen_name}/profile_image?size=normal")
+        .comment-block  
+          .comment-header
+            %cite.user.blog-author
+              = link_to tweet.user.name, "https://twitter.com/#{tweet.user.screen_name}", :target => "_blank"
+            %span.datetime.secondary-text                  
+              = link_to message_time(tweet.created_at), "javascript:void(0)"
+          %p.comment-content
+            = tweet.full_text
+            .clear
+            Retweets : 
+            = tweet.retweet_count
+            .clear
+            Favorite : 
+            = tweet.favorite_count

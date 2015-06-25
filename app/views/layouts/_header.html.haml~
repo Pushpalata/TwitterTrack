@@ -1,0 +1,36 @@
+#masthead.affix-top{:role => "banner", :style => "top: 0px;"}
+  .container
+    .navbar.navbar-inverse
+      .navbar-inner
+        .btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+          %img{:src => "http://4.bp.blogspot.com/-e9CebrMaKCk/U9VrWEmLExI/AAAAAAAABEU/SCbtff7QMoI/s1600/bmenu+(1).png"}/
+        #header.header.section
+          #Header1.widget.Header
+            #header-inner
+              %a{:href => "/", :style => "display: block"}
+                = image_tag("twittertrack.png",:alt => "Twitter Track", :height => "65px; ", :style => "display: block", :width => "260px; ", :class => "")
+        .nav-collapse.collapse
+          %ul#menu-primary.nav
+            %li
+              %a{:href => "/"} Home
+            %li
+              = link_to "Compare", compare_tweet_path
+            %li
+              %a{:href => "#"} Posts
+            %li.dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                Portfolio
+                %i.fa.fa-caret-down
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} Full Width
+                %li
+                  %a{:href => "#"} Right Sidebar
+                %li
+                  %a{:href => "#"} Left Sidebar
+                %li
+                  %a{:href => "#"} 404 Page
+            %li
+              = link_to "About", about_path
+              %a{:href => "http://www.soratemplates.com/2014/08/addiction-blogger-templates.html"} Download
+  .clear

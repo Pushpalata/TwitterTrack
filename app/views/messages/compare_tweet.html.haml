@@ -1,0 +1,21 @@
+.post
+  .entry-container
+    .entry-content
+      %h1
+        Compare on Twitter
+  = form_tag compare_tweet_path, :method => :get do |f|
+    #searchform.searchform
+      %label
+        Term 1
+      = text_field_tag :term1, params[:term1], :placeholder => "Search..."
+      .clear
+      %label
+        Term 2
+      = text_field_tag :term2, params[:term2], :placeholder => "Search..."
+      .clear
+      = submit_tag "Compare", :class => "btn"
+  .clear
+.comments#comments
+  %h4
+    Recent Tweets
+  
